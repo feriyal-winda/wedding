@@ -1,5 +1,12 @@
 $(document).ready(function () {
 	AOS.init();
+	// open invitation
+	$('.btn-open').click(function() {
+		$('html').removeClass('invitation-closed');
+		$('#invitation_cover').hide("slow", function() {
+            // Animation complete.
+        });
+	  });
 	// story-carousel
 	if ($('.story-carousel').length) {
 		$('.story-carousel').owlCarousel({

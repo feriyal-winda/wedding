@@ -25,9 +25,26 @@
     <link href="assets/css/winner.css" rel="stylesheet" />
     <!-- JS Main -->
     <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        function playMusic() {
+            var music = document.getElementById("music");
+            var icon = document.getElementById("music-icon");
+            if (music.duration > 0 && !music.paused) {
+                music.pause();
+                icon.classList.remove("fa-pause");
+                icon.classList.add("fa-play");
+            } else {
+                music.play();
+                icon.classList.remove("fa-play");
+                icon.classList.add("fa-pause");
+            }
+        }
+    </script>
 </head>
 
 <body>
+    <!-- Background Music -->
+    <audio id="music" src="music/bg-music.mp3" autoplay loop></audio>
     <!-- Modal Gift-->
     <div class="modal fade modal-gift" id="modal_gift" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -76,6 +93,9 @@
         <img src="assets/img/gift-box.png" alt="gift">
         Send Gift
     </a>
+    <a href="javascript:void(0)" onclick="playMusic()" class="float">
+        <i id="music-icon" class="fa fa-pause my-float"></i>
+    </a>
     <!-- end:: wedding gift -->
 
     <!-- end:: wedding gift -->
@@ -106,7 +126,7 @@
                         document.getElementById("from").textContent = d;
                     </script>
                     <p>Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Menghadiri Acara Pernikahan Kami.</p>
-                    <a href="#" class="btn-open">Open Invitation</a>
+                    <a href="#" class="btn-open" onclick="playMusic()">Open Invitation</a>
                 </div>
             </div>
         </div>
@@ -126,10 +146,18 @@
                         <p>
                             <i>Kepada Yth<br />Bapak/Ibu/Saudara/i</i>
                         </p>
-                        <h3>
-                            Prof. Supardi MM
-                            <span>Malang</span>
+                        <h3 id="user2">
+                            ''
+                            <span id="from2"></span>
                         </h3>
+                        <script>
+                            var url_string = window.location.href;
+                            var url = new URL(url_string);
+                            var c = url.searchParams.get("name");
+                            var d = url.searchParams.get("from");
+                            user2.firstChild.data = c;
+                            document.getElementById("from2").textContent = d;
+                        </script>
                         <p>Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Menghadiri Acara Pernikahan Kami.
                         </p>
                     </div>

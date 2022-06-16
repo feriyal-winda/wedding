@@ -423,6 +423,7 @@ html.invitation-closed body {
 
 .wf-bride-row .wf-bride-col {
   flex: 1%;
+  flex-basis: fit-content;
   padding: 0 15px;
 }
 
@@ -569,7 +570,7 @@ html.invitation-closed body {
 
 .wf-schedule-row .wf-schedule-col {
   flex: 1%;
-  padding: 0 15px;
+  padding: 0 12px;
 }
 
 .wf-schedule-row .wf-schedule-content {
@@ -933,6 +934,12 @@ html.invitation-closed body {
   }
   .wf-section#section-gallery .photo-gallery-wrapper .img-item.img-landscape img {
     height: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    max-width: 700px;
   }
 }
 

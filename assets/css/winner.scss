@@ -436,6 +436,7 @@ html.invitation-closed body {
 
     .wf-bride-col {
         flex: 1%;
+        flex-basis: fit-content;
         padding: 0 15px;
     }
 
@@ -594,7 +595,7 @@ html.invitation-closed body {
 
     .wf-schedule-col {
         flex: 1%;
-        padding: 0 15px;
+        padding: 0 12px;
     }
 
     .wf-schedule-content {
@@ -981,6 +982,11 @@ html.invitation-closed body {
                 height: 220px;
             }
         }
+    }
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        max-width: 700px;
     }
 }
 @media (max-width: 767px) {

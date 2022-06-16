@@ -309,7 +309,7 @@ html.invitation-closed body {
 .wf-top-header .header-name::after {
   content: "";
   position: absolute;
-  background-color: #6e5e2d;
+  background-color: #232323;
   left: 0;
   right: 0;
   bottom: 0;

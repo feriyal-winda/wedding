@@ -321,7 +321,7 @@ html.invitation-closed body {
         &::after {
             content: "";
             position: absolute;
-            background-color: #6e5e2d;
+            background-color: $text;
             left: 0;
             right: 0;
             bottom: 0;

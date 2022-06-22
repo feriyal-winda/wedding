@@ -444,13 +444,16 @@ html.invitation-closed body {
     align-items: center;
 
     .wf-bride-col {
-        flex: 1%;
+        flex-shrink: 3;
         flex-basis: fit-content;
         padding: 0 15px;
+        flex: 1%;
     }
 
     .wf-bride-middle {
         padding: 0 5px;
+        flex: unset;
+        width: 50px;
     }
 
     .wf-bride-desc {

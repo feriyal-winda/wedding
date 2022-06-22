@@ -432,13 +432,16 @@ html.invitation-closed body {
 }
 
 .wf-bride-row .wf-bride-col {
-  flex: 1%;
+  flex-shrink: 3;
   flex-basis: fit-content;
   padding: 0 15px;
+  flex: 1%;
 }
 
 .wf-bride-row .wf-bride-middle {
   padding: 0 5px;
+  flex: unset;
+  width: 50px;
 }
 
 .wf-bride-row .wf-bride-desc {
